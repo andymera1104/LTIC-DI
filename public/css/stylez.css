@@ -1,0 +1,259 @@
+body {
+  padding: 60px 0px;
+}
+.navbar-collapse {
+  position: relative;
+  padding-top: 2px !important;
+  max-height: 270px;
+}
+.search-form .form-group {
+  float: right !important;
+  transition: all 0.35s, border-radius 0s;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+.search-form .form-group input.form-control {
+  padding-right: 20px;
+  border: 0 none;
+  background: transparent;
+  box-shadow: none;
+  display:block;
+}
+.search-form .form-group input.form-control::-webkit-input-placeholder {
+  display: none;
+}
+.search-form .form-group input.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  display: none;
+}
+.search-form .form-group input.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  display: none;
+}
+.search-form .form-group input.form-control:-ms-input-placeholder {
+  display: none;
+}
+.search-form .form-group:hover,
+.search-form .form-group.hover {
+  width: 100%;
+  border-radius: 4px 25px 25px 4px;
+}
+.search-form .form-group i.form-control-feedback {
+  color: #4CBFDC;
+  left: initial;
+  font-size: 14px;
+}
+/* enable absolute positioning */
+.inner-addon { 
+  position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+position: absolute;
+padding: 10px;
+pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+/*imagen*/
+img {
+  width:100%;
+}
+#img-principal{  
+  width: 100%;
+  max-width:100%;
+}
+
+.centered {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: auto;
+  background-color: rgba(76, 191, 220, 0.25);  
+  color: white;
+  width: 100%;  
+}
+/*zoom imagen principal*/
+/* The Image container */
+.img-hover-zoom {  
+  overflow: hidden; /* Removing this will break the effects */
+}
+/* Slow-motion Zoom Container */
+.img-hover-zoom--slowmo img {
+  transform-origin: 50% 65%;
+  transition: transform 5s, filter 3s ease-in-out;
+  filter: brightness(150%);
+}
+
+/* The Transformation */
+.img-hover-zoom--slowmo:hover img {
+  filter: brightness(100%);
+  transform: scale(3);
+}
+/*row 2 centro top*/
+#row1{
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+#row2{
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+.top-centered {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+}
+hr {
+  height: 4px;
+  color: #4CBFDC;
+  background-color: #4CBFDC;
+  border: none;
+  }
+  /*carousel*/
+  .carousel-caption{
+    opacity:0;
+    transition:500ms ease-in-out;
+  }
+  .carousel-item:hover .carousel-caption{
+    opacity:1;
+    background-color: #4CBFDC;
+  }
+  /*imagenes noticias*/
+  .zoom {    
+    transition: transform .2s; /* Animation */    
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  /*counter*/
+  .counter {
+    background-color:#4CBFDC;
+    padding: 20px 0;    
+}
+
+.count-title {
+    font-size: 50px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    color: white;
+}
+
+.count-text {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    color:white;
+}
+/*gallery*/
+#hovi {
+  display: none;
+  /*opacity: 0;
+  transform: translateY(-100%);*/
+}
+  
+a:hover + #hovi {  
+  display: block;
+  /*opacity: 1;*/
+  transform: translateY(-100%);
+  width: 100%;
+  text-align: center;
+  margin: 0%;
+  padding: 0%;
+  position: absolute;
+  background-color: rgba(76, 191, 220);    
+  
+}
+/*footer*/
+.table {border: 1px solid none!important;} 
+.table tr, .table td, .table th {border: 0!important;}
+.table tr td, 
+.table tr th {border-left: 1px solid none!important;}
+.table tr td:nth-child(1), 
+.table tr th:nth-child(1) {border-left: 0!important;}
+.center-block {
+  display: block;
+  position: relative; 
+  margin-top: auto;
+  margin-bottom: auto; 
+  margin-left: auto;
+  margin-right: auto;
+}
+.img-hover-zoom1 {  
+  overflow: hidden; /* Removing this will break the effects */
+}
+/* Slow-motion Zoom Container */
+.img-hover-zoom--slowmo1 img {
+  transform-origin: 50% 65%;
+  transition: transform 1s, filter 3s ease-in-out;
+  filter: brightness(110%);
+}
+
+/* The Transformation */
+.img-hover-zoom--slowmo1:hover img {
+  filter: brightness(100%);
+  transform: scale(0.8);  
+}
+/*subrayado*/
+#subrayado{
+  text-decoration: underline;
+}
+#subrayado:hover{
+  color:#4CBFDC!important;
+}
+.vl {
+  border-left: 2px solid rgba(172, 171, 171, 0.507);
+  height: 200px;
+  max-height: 50%;
+  padding:0%; 
+  margin:0%;
+}
+/*Tabla 2*/
+.table2 {border: 1px solid #4CBFDC!important; color:black;} 
+.table2 tr, .table2 td, .table2 th {border: 0!important;}
+.table2 tr td, 
+.table2 tr th {border-left: 1px solid #4CBFDC!important;}
+.table2 tr td:nth-child(1), 
+.table2 tr th:nth-child(1) {border-left: 0!important;}
+.center-block {
+  display: block;
+  position: relative; 
+  margin-top: auto;
+  margin-bottom: auto; 
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Titulos Slide In*/
+@keyframes slideInFromTop {
+  0% {  
+    opacity: 0%;  
+    transform: translateY(-100%);
+  }
+  100% {    
+    opacity: 1%;
+    transform: translateY(0);
+  }
+}
+.expandable {    
+  animation: 1s ease-out 0s 1 slideInFromTop;
+ }
