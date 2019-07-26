@@ -26,6 +26,7 @@
                         <th>Nombre</th>
                         <th>Descripción</th>
                         <th>Programa</th>
+                        <th>Director</th>
                         <th>Opciones</th>
                     </tr>
                     </thead>
@@ -36,6 +37,7 @@
                             <td>{{ $pro -> nombre }}</td>
                             <td>{{ $pro -> DESCRIPCION }}</td>
                             <td>{{ $pro -> programa }}</td>
+                            <td>{{ $pro -> DIRECTOR }}</td>
                             <td>
                                 <center>
                                 <a href="{{URL::action('ProyectoInvestigacionController@edit',$pro->POST_ID)}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>

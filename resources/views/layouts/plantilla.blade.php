@@ -140,11 +140,11 @@
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/proyectosPostulados')}}">Postulados</a>
 								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/proyectos')}}">Proyectos Inv</a>
+								<a  style="color:#000;" class="dropdown-item" href="{{url('investigacionProyectos')}}">Proyectos/Investigador</a>
 								<hr>
 								<a  style="color:#000;" class="dropdown-item" href="{{url('proyectosFacultad')}}">Proyectos/Facultad</a>
 								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('investigacionProyectos')}}">Proyectos/Investigador</a>
+								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/proyectos')}}">Proyectos Inv</a>
 								<hr>
 								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/lineas_x_pi_postulado')}}">Lineas/P.Postulados</a>
 								<hr>

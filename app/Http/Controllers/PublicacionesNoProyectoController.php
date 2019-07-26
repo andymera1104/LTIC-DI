@@ -62,7 +62,9 @@ class PublicacionesNoProyectoController extends Controller
 
         $noproy->save();
         Session::flash('message', $noproy->TITULO.' fue creado satisfactoriamente.');
-        return Redirect::to('publicaciones/publicaciones_noproyectos');
+        //return Redirect::to('publicaciones/publicaciones_noproyectos');
+        return Redirect::to('invesNoProyecto/create');
+      
         }catch (\Illuminate\Database\QueryException $e)
         {
             return redirect()->back()->with('alert', 'ERROR... El registro ya existe!');

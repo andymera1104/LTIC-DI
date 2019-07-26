@@ -28,10 +28,10 @@
 
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12" >
             <div class="input-group">
-            <span style="width: 130px;"class="input-group-addon">ID Proyecto</span>
-                <select  style="width:130px;" name="POST_ID" class="form-control" >
+            <span style="width: 130px;"class="input-group-addon">Proyecto</span>
+                <select  style="width:212px;" name="POST_ID" class="form-control" >
                     @foreach($pipo as $pip)
-                        <option value="{{$pip ->POST_ID}}">{{$pip ->POST_ID}}</option>
+                        <option value="{{$pip ->POST_ID}}">{{$pip ->NOMBRE}}</option>
                     @endforeach
                 </select>
             </div>
@@ -47,9 +47,20 @@
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12" >
             <div class="input-group">
             <span style="width: 130px;"class="input-group-addon">Programa</span>
-                <select  style="width:130px;" name="PROG_ID" class="form-control" >
+                <select  style="width:212px;" name="PROG_ID" class="form-control" >
                     @foreach($programa as $prog)
-                        <option value="{{$prog ->PROG_ID}}">{{$prog ->PROG_ID}}</option>
+                        <option value="{{$prog ->PROG_ID}}">{{$prog ->DESCRIPCION}}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12" >
+            <div class="input-group">
+            <span style="width: 130px;"class="input-group-addon">Director</span>
+                <select  style="width:212px;" name="DIRECTOR" class="form-control" >
+                    @foreach($inves as $inv)
+                        <option value="{{$inv ->INV_ID}}">{{$inv ->NOMBRE}} {{$inv ->APELLIDO}}</option>
                     @endforeach
                 </select>
             </div>

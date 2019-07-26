@@ -30,7 +30,8 @@ class ProyectoInvestigacionFormRequest extends FormRequest
         //'NOMBRE'=>'required|max:100',
         'DESCRIPCION'=>'required',
         'IMAGEN'=>'mimes:jpeg,png,jpg',
-        'VIDEO'
+        'VIDEO',
+        'DIRECTOR'=>'required',
 
         ];
     }

@@ -57,7 +57,7 @@ class InvPubNoProyController extends Controller
         $noproy->PUBLNOPROY_ID=$request->get('PUBLNOPROY_ID');
         $noproy->INV_ID=$request->get('INV_ID');
         $noproy->save();
-        return Redirect::to('invesNoProyecto');
+        return Redirect::to('publicaciones/publicaciones_noproyectos');
         }catch (\Illuminate\Database\QueryException $e)
         {
             return redirect()->back()->with('alert', 'ERROR... El registro ya existe!');

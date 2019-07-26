@@ -19,7 +19,8 @@ class ProyectoInvestigacion extends Model
         
         'DESCRIPCION',
         'IMAGEN',
-        'VIDEO'
+        'VIDEO',
+        'DIRECTOR',
     ];
 
     protected $guarded = 
