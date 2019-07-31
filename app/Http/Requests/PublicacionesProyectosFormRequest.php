@@ -27,14 +27,14 @@ class PublicacionesProyectosFormRequest extends FormRequest
             //
             'PUBL_ID'=>'required',
             'AREA_ID'=>'required',
-            'FAC_ID'=>'required',
+            //'FAC_ID'=>'required',
             'POST_ID'=>'required',
             'TITULO'=>'required',
             'ABSTRACT'=>'required',
             'FECHAPUB'=>'required|after_or_equal:FECHAPUB',
             'REVISTA'=>'required',
             'TIPO'=>'required',
-            'NIVEL'=>'required'
+            //'NIVEL'=>'required'
         ];
     }
 }

@@ -75,9 +75,10 @@
             <br>
             <br>
             <br>
+            <br>
             <div class="row text-center">             
               <div class="col-12" style="margin:0%;">                 
-                    <div class="expandable" style=" margin:0%;padding:0%; width:100%;max-width:100%;"><br><h3><a style="text-decoration: none; color:black;" >INVESTIGACIONES</a></h3><hr size="30"></div>               
+                    <div class="expandable" style=" margin:0%;padding:0%; width:100%;max-width:100%;"><br><h3><a style="text-decoration: none; color:black;" >DOMINIOS ACADÉMICOS</a></h3><hr size="30"></div>               
                     <div class="row" style="margin:0%;padding:0%; width:100%;max-width:100%;">
                           @foreach($investigacionTT as $dato)                  
                           <div class="col-sm-12 col-md-3 col-lg-4">										

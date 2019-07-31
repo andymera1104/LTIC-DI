@@ -55,10 +55,11 @@
             <br>
             <br>
            <br>
+           <br>
           
            <div class="row text-center">             
               <div class="col-12" style="margin:0%;">                 
-                    <div class="expandable" style=" margin:0%;padding:0%; width:100%;max-width:100%;"><br><h3><a style="text-decoration: none; color:black;" >PUBLICACIONES</a></h3><hr size="30"></div>               
+                    <div class="expandable" style=" margin:0%;padding:0%; width:100%;max-width:100%;"><br><h3><a style="text-decoration: none; color:black;" >ÁREAS DEL CONOCIMIENTO</a></h3><hr size="30"></div>               
                     <div class="row" style="margin:0%;padding:0%; width:100%;max-width:100%;">
                     
                           @foreach($publicacionTT as $dato)    					

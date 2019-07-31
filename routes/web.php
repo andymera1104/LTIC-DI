@@ -86,3 +86,7 @@ Route::resource('eventC', 'EventController');
 
 //ElementosMultimediaPaginaPrincipal
 Route::resource('elementosMultimediaC', 'ElementosMultimediaC');
+
+
+//lineaspiCPaginaPrincipal
+Route::resource('lineaspiC', 'LineaspiController');

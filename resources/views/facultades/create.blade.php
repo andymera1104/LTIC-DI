@@ -26,7 +26,7 @@
         <div class="col-lg-5 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
                 <span style="width: 130px;" class="input-group-addon">ID Facultad</span>
-                <input type="text" name="FAC_ID" required value="{{old('FAC_ID')}}" class="form-control" placeholder="Nombre Facultad">
+                <input type="text" name="FAC_ID" required value="{{old('FAC_ID')}}" class="form-control" placeholder="ID Facultad">
             </div>
         </div>
 
@@ -61,7 +61,7 @@
         <div class="col-lg-5 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
                     <span style="width:130px;" class="input-group-addon">Telefono</span>
-                    <input type="text" name="TELEFONO" required value="{{old('TELEFONO')}}" class="form-control" placeholder="Ingrese Telefono">
+                    <input type="text" name="TELEFONO" required value="{{old('TELEFONO')}}" class="form-control" placeholder="Ingrese Teléfono">
             </div>
         </div>
 

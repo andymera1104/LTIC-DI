@@ -1,8 +1,7 @@
 @extends('layout.home')
 @section('content')
     <!---->
-    <br><br><br>
-    
+    <br><br><br><br>
             <div class="row text-center">
             <div class="col-12" style="margin:0%;">
             <div class="expandable" style=" margin:0%;padding:0%; width:100%;max-width:100%;"><br><h3><a style="text-decoration: none; color:black;" >NOTICIAS</a></h3><hr size="30">
@@ -44,7 +43,7 @@
                                  </div>
                             </div>
                             <div class="col-6 align-self-center text-justify" >
-                                    <b>{{ $not -> TITULO }}</b>
+                                    <b><strong><h3>{{ $not -> TITULO }}</h3></strong></b>
                                     <br> {{ $not -> FECHA }} <br>
                                     <br>
                                 {{ $not -> RESUMEN }}
@@ -52,6 +51,8 @@
                             </div>
             
                         </div>
+                        <br>
+                        <br>
                         <br>
                         @endforeach
                     </div>

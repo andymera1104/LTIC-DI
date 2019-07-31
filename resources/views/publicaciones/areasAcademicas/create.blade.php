@@ -34,7 +34,7 @@
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
                     <span style="width:130px;" class="input-group-addon">Descripción</span>
-                    <textarea type="text" name="DESCRIPCION" required value="{{old('DESCRIPCION')}}" class="form-control" placeholder="Descripcion del Área"></textarea>
+                    <textarea type="text" name="DESCRIPCION" required value="{{old('DESCRIPCION')}}" class="form-control" placeholder="Descripción del Área"></textarea>
             </div>
         </div>
 
@@ -57,7 +57,7 @@
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
             <span style="width: 130px;" class="input-group-addon">Video </span>
-                    <input type="text" name="VIDEO" required value="{{old('VIDEO')}}" class="form-control" placeholder="Ingrese URL Video">
+                    <input type="text" name="VIDEO" value="{{old('VIDEO')}}" class="form-control" placeholder="Ingrese URL Video">
             </div> 
         </div>
         

@@ -29,7 +29,7 @@ class ProyectosFacultadController extends Controller
             ->join('proyectoinvestigacion as prin','pifac.POST_ID','=','prin.POST_ID')
             ->join('facultad as fac','pifac.FAC_ID','=','fac.FAC_ID')
 
-            ->select('fac.FAC_ID as facultad','prin.POST_ID as proyecto')
+            ->select('fac.FAC_ID as facultad','prin.POST_ID as proyecto','fac.NOMBRE as nomfacu')
             ->where('fac.FAC_ID','LIKE','%'.$query.'%')
             ->orwhere('prin.POST_ID','LIKE','%'.$query.'%')
             ->orderBy('pifac.FAC_ID', 'ASC')
@@ -72,14 +72,11 @@ class ProyectosFacultadController extends Controller
     public function destroy($id)
     {
         try{
-        if($profac=ProyectosFacultad::findOrFail($id))
-        {
+        $profac=ProyectosFacultad::findOrFail($id);
+        
         $profac->delete();
         return Redirect::to('proyectosFacultad');
-        }
-        else{
-            return back()->with('res','Registro no encontrado');
-        }
+        
         
         }catch (\Illuminate\Database\QueryException $e)
         {

@@ -26,7 +26,7 @@
                         <th>Id</th>
                         <th>Área</th>
                         <th>Proyecto</th>
-                        <th>Facultad</th>
+                      
                         <th>Título</th>
                         <th>Abstract</th>
                         <th>Fecha</th>
@@ -41,7 +41,7 @@
                             <td>{{ $pub -> PUBL_ID }}</td>
                             <td>{{ $pub -> area }}</td>
                             <td>{{ $pub -> proyecto }}</td>
-                            <td>{{ $pub -> facultad }}</td>
+                            
                             <td>{{ $pub -> TITULO }}</td>
                             <td>{{ $pub -> ABSTRACT }}</td>
                             <td>{{ $pub -> FECHAPUB }}</td>

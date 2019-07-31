@@ -68,33 +68,15 @@
 
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
-            <span style="width: 130px;"class="input-group-addon">Facultad</span>
-                <select style="width: 250px;" name="FAC_ID" class="form-control" >
-                    @foreach($facultades as $fac)
-                        <option value="{{$fac ->FAC_ID}}">{{$fac ->FAC_ID}}</option>
-                    @endforeach
-                </select>
-            </div>
-        </div>
-
-        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-            <div class="input-group">
             <span style="width: 130px;" class="input-group-addon">Revista</span>
-                    <input type="text" name="REVISTA" required value="{{old('REVISTA')}}" class="form-control" placeholder="Revista">
+                    <input style="width: 250px;" type="text" name="REVISTA" required value="{{old('REVISTA')}}" class="form-control" placeholder="Revista">
             </div> 
         </div>
 
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
             <span style="width: 130px;" class="input-group-addon">Tipo </span>
-                    <input style="width: 250px;" type="text" name="TIPO" required value="{{old('TIPO')}}" class="form-control" placeholder="Tipo">
-            </div> 
-        </div>
-
-        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-            <div class="input-group">
-            <span style="width: 130px;" class="input-group-addon">Nivel </span>
-                    <input type="text" name="NIVEL" required value="{{old('NIVEL')}}" class="form-control" placeholder="Ingrese Nivel ejemplo: Q1">
+                    <input style="width: 212px;" type="text" name="TIPO" required value="{{old('TIPO')}}" class="form-control" placeholder="Tipo">
             </div> 
         </div>
 

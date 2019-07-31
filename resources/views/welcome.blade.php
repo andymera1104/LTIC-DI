@@ -60,7 +60,7 @@
 				
 				<div col-12 style="width:100%;max-width:100%;">
 										
-						<div class="expandable"><br><h2><a  id="subrayado" style="text-decoration: none; color:black;" href="#publicaciones">PROYECTOS</a></h3></div>
+						<div class="expandable"><br><h2><a  id="subrayado" style="text-decoration: none; color:black;" href="{{ route('proyectosC.index') }}">PROYECTOS</a></h3></div>
 							
 						<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner" role="listbox">

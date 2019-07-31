@@ -27,10 +27,12 @@ class PublicacionesProyectosController extends Controller
             $query=trim($request->get('searchText'));
             $publicaciones=DB::table('publicaciones as public')
             ->join('areasacademicas as acad','public.AREA_ID','=','acad.AREA_ID')
-            ->join('pi_x_fac as pifac','public.FAC_ID','=','pifac.FAC_ID')
-           
+            //->join('pi_x_fac as pifac','public.FAC_ID','=','pifac.FAC_ID')
+            //->join('facultad as fac','public.FAC_ID','=','fac.FAC_ID')
+            ->join('proyectoinvestigacion as proy', 'public.POST_ID','=','proy.POST_ID')
+                    
 
-            ->select('public.PUBL_ID','acad.NOMBRE as area','pifac.POST_ID as proyecto','pifac.FAC_ID as facultad','public.TITULO','public.ABSTRACT','public.FECHAPUB','public.REVISTA','public.TIPO')
+            ->select('public.PUBL_ID','acad.NOMBRE as area','proy.POST_ID as proyecto','public.TITULO','public.ABSTRACT','public.FECHAPUB','public.REVISTA','public.TIPO')
 
             ->where('public.TITULO','LIKE','%'.$query.'%')
             ->orwhere('public.REVISTA','LIKE','%'.$query.'%')
@@ -44,34 +46,35 @@ class PublicacionesProyectosController extends Controller
     public function create()
     {
         $areas=DB::table('areasacademicas')->get();
-        $proyectos=DB::table('pi_x_fac')->get();
-        $facultades=DB::table('pi_x_fac')->get();
+        $proyectos=DB::table('proyectoinvestigacion')->get();
+        //$facultades=DB::table('pi_x_fac')->get();
+        //$fac=DB::table('facultad')->get();
         //dd($categorias);
-        return view('publicaciones/publicacionesProyectos/create',["areas"=>$areas,"proyectos"=>$proyectos,"facultades"=>$facultades]);
+        return view('publicaciones/publicacionesProyectos/create',["areas"=>$areas,"proyectos"=>$proyectos]);
 
     }
 
     public function store(PublicacionesProyectosFormRequest $request)
     {
-        try{
+        //try{
         $publicacion = new PublicacionesProyectos;
         $publicacion->PUBL_ID=$request->get('PUBL_ID');
         $publicacion->AREA_ID=$request->get('AREA_ID');
-        $publicacion->FAC_ID=$request->get('FAC_ID');
+       // $publicacion->FAC_ID=$request->get('FAC_ID');
         $publicacion->POST_ID=$request->get('POST_ID');
         $publicacion->TITULO=$request->get('TITULO');
         $publicacion->ABSTRACT=$request->get('ABSTRACT');
         $publicacion->FECHAPUB=$request->get('FECHAPUB');
         $publicacion->REVISTA=$request->get('REVISTA');
         $publicacion->TIPO=$request->get('TIPO');
-        $publicacion->NIVEL=$request->get('NIVEL');
+        //$publicacion->NIVEL=$request->get('NIVEL');
 
         $publicacion->save();
         return Redirect::to('publicaciones/publicacionesProyectos');
-        }catch (\Illuminate\Database\QueryException $e)
-        {
-            return redirect()->back()->with('alert', 'ERROR... El registro ya existe!');
-        }
+        //}catch (\Illuminate\Database\QueryException $e)
+        //{
+          //  return redirect()->back()->with('alert', 'ERROR... El registro ya existe!');
+        //}
     }
 
     public function show($id)
@@ -83,9 +86,9 @@ class PublicacionesProyectosController extends Controller
     {
         $publicacion = PublicacionesProyectos::findOrFail($id);
         $areas=DB::table('areasacademicas')->get();
-        $proyectos=DB::table('pi_x_fac')->get();
-        $facultades=DB::table('pi_x_fac')->get();
-        return view("publicaciones/publicacionesProyectos/edit",["publicacion"=>$publicacion,"areas"=>$areas,"proyectos"=>$proyectos,"facultades"=>$facultades]);
+        $proyectos=DB::table('proyectoinvestigacion')->get();
+        //$facultades=DB::table('pi_x_fac')->get();
+        return view("publicaciones/publicacionesProyectos/edit",["publicacion"=>$publicacion,"areas"=>$areas,"proyectos"=>$proyectos]);
     }
 
     public function update(PublicacionesProyectosFormRequest $request, $id)
@@ -93,14 +96,14 @@ class PublicacionesProyectosController extends Controller
          $publicacion = PublicacionesProyectos::findOrFail($id);
          $publicacion->PUBL_ID=$request->get('PUBL_ID');
         $publicacion->AREA_ID=$request->get('AREA_ID');
-        $publicacion->FAC_ID=$request->get('FAC_ID');
+        //$publicacion->FAC_ID=$request->get('FAC_ID');
         $publicacion->POST_ID=$request->get('POST_ID');
         $publicacion->TITULO=$request->get('TITULO');
         $publicacion->ABSTRACT=$request->get('ABSTRACT');
         $publicacion->FECHAPUB=$request->get('FECHAPUB');
         $publicacion->REVISTA=$request->get('REVISTA');
         $publicacion->TIPO=$request->get('TIPO');
-        $publicacion->NIVEL=$request->get('NIVEL');
+       // $publicacion->NIVEL=$request->get('NIVEL');
 
         $publicacion->save();
         return Redirect::to('publicaciones/publicacionesProyectos');

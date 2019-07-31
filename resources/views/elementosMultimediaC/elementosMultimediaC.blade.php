@@ -1,7 +1,7 @@
 @extends('layout.home')
 @section('content')
     <!---->
-    <br><br><br>
+    <br><br><br><br>
     
             <div class="row text-center">
             <div class="col-12" style="margin:0%;">
@@ -40,7 +40,7 @@
                         @foreach($elementos as $el)
                         <div class="row col-lg-12">
                             <div class="col-3 align-self-center">
-                                <b>{{ $el -> centro }}</b>
+                                <b><strong><h3>{{ $el -> centro }}</h3></strong></b>
                             </div>
 
                             <div class="col-5 align-self-center ">

@@ -67,7 +67,7 @@
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
             <span style="width: 130px;" class="input-group-addon">Extensión </span>
-                    <input type="text" name="EXTENSION" required value="{{old('EXTENSION')}}" class="form-control" placeholder="ingrese Extensión">
+                    <input type="text" name="EXTENSION" required value="{{old('EXTENSION')}}" class="form-control" placeholder="Ingrese Extensión">
             </div>     
         </div>
         

@@ -38,7 +38,7 @@
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
                 <span style="width: 130px;" class="input-group-addon">ID Escuela</span>
-                <input type="text" name="ESC_ID" required value="{{old('ESC_ID')}}" class="form-control" placeholder="Nombre Escuela">
+                <input type="text" name="ESC_ID" required value="{{old('ESC_ID')}}" class="form-control" placeholder="ID Escuela">
             </div>
         </div>
 

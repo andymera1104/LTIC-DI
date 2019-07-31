@@ -25,7 +25,7 @@ class CategoriaFormRequest extends FormRequest
     {
         return [
             //
-            'NIVEL'=>'required|max:15'
+            'NIVEL'=>'required|unique:cat_invest|max:15',
         ];
     }
 }

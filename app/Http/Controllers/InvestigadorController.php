@@ -37,6 +37,7 @@ class InvestigadorController extends Controller
             ->select('inv.INV_ID','cat.NIVEL as nivel','gru.NOMBRE as grupo','inv.NOMBRE','inv.APELLIDO','inv.URLRESEARCH','car.NOMBRE as carrera','fac.NOMBRE as facultad','inv.FOTO')
             ->where('inv.NOMBRE','LIKE','%'.$query.'%')
             ->orwhere('gru.NOMBRE','LIKE','%'.$query.'%')
+            ->orwhere('inv.INV_ID','LIKE','%'.$query.'%')
             ->orderBy('INV_ID', 'asc')
             ->paginate(7);
 

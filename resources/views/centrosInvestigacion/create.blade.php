@@ -34,7 +34,7 @@
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
                     <span style="width:130px;" class="input-group-addon">Descripción</span>
-                    <textarea type="text" name="DESCRIPCION" required value="{{old('DESCRIPCION')}}" class="form-control" placeholder="Descripcion del Centro"></textarea>
+                    <textarea type="text" name="DESCRIPCION" required value="{{old('DESCRIPCION')}}" class="form-control" placeholder="Descripción del Centro"></textarea>
             </div>
         </div>
         

@@ -1,5 +1,8 @@
 @extends ('layouts.plantilla')
 @section('contenido')
+
+
+
 @if (session('alert'))
     <div class="alert alert-danger">
         {{ session('alert') }}
@@ -27,13 +30,6 @@
             {{Form::token()}}
     <div class="row">
 
-         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-            <div class="input-group">
-                <span style="width: 130px;" class="input-group-addon">Identificacion</span>
-                <input type="text" name="INV_ID" required value="{{old('INV_ID')}}" class="form-control" placeholder="Identificación Investigador">
-            </div>
-        </div>
-
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
                 <span style="width: 130px;" class="input-group-addon">Tipo</span>
@@ -45,6 +41,15 @@
                 </select>
             </div>
         </div>
+
+         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+            <div class="input-group">
+                <span style="width: 130px;" class="input-group-addon">Identificación</span>
+                <input type="text" maxlength="10" name="INV_ID" id="INV_ID" required value="{{old('INV_ID')}}" class="form-control" placeholder="Identificación Investigador" onKeyUp="validar()">
+                <div id="salida"></div>
+            </div>
+        </div>
+
 
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
@@ -83,15 +88,15 @@
 
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
-            <span style="width: 130px;" class="input-group-addon">Biografia&nbsp </span>
-                    <textarea style="width: 212px;" type="text" name="BIOGRAFIA" required value="{{old('BIOGRAFIA')}}" class="form-control" placeholder="biografia Investigador"></textarea>
+            <span style="width: 130px;" class="input-group-addon">Biografia</span>
+                    <textarea style="width: 212px;" type="text" name="BIOGRAFIA" required value="{{old('BIOGRAFIA')}}" class="form-control" placeholder="Biografia Investigador"></textarea>
             </div> 
         </div>
 
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12" style="display">
             <div class="input-group">
             <span style="width: 130px;" class="input-group-addon">Video </span>
-                    <textarea style="width: 212px;" type="text" name="VIDEO" required value="{{old('VIDEO')}}" class="form-control" placeholder="Ingrese URL Video"></textarea>
+                    <textarea style="width: 212px;" type="text" name="VIDEO"  value="{{old('VIDEO')}}" class="form-control" placeholder="Ingrese URL Video"></textarea>
             </div> 
         </div>
 
@@ -144,5 +149,38 @@
 
     </div>
 
-    {!!Form::close()!!}    
+
+    {!!Form::close()!!}  
+
+	<script type="text/javascript">
+      function validar() {
+        var cad = document.getElementById("INV_ID").value.trim();
+        var total = 0;
+        var longitud = cad.length;
+        var longcheck = longitud - 1;
+
+        if (cad !== "" && longitud === 10){
+          for(i = 0; i < longcheck; i++){
+            if (i%2 === 0) {
+              var aux = cad.charAt(i) * 2;
+              if (aux > 9) aux -= 9;
+              total += aux;
+            } else {
+              total += parseInt(cad.charAt(i)); // parseInt o concatenará en lugar de sumar
+            }
+          }
+
+          total = total % 10 ? 10 - total % 10 : 0;
+
+          if (cad.charAt(longitud-1) == total) {
+            document.getElementById("salida").innerHTML = ("Cedula Válida");
+          }else{
+            document.getElementById("salida").innerHTML = ("Cedula Inválida");
+          }
+        }
+      }
+    </script>
+
+    
+   
 @endsection

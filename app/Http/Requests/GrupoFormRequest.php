@@ -24,7 +24,7 @@ class GrupoFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'NOMBRE'=>'required|max:24',
+            'NOMBRE'=>'required|unique:grupo|max:24',
             'DESCRIPCION'
 
         ];

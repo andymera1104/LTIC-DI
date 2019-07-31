@@ -37,7 +37,9 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	
 	</head>
 	<body>
 
@@ -76,7 +78,7 @@
 
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							UNIDAD/ACADÉMICA
+							UNIDAD ACADÉMICA
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a  style="color:#000;" class="dropdown-item" href="{{url('/facultades')}}">Facultades</a>
@@ -98,7 +100,7 @@
 								<hr>
 								<a  style="color:#000;" class="dropdown-item" href="{{url('investigacion/grupo')}}">Grupos</a>
 								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('investigacion/categoria')}}">Categorias</a>
+								<a  style="color:#000;" class="dropdown-item" href="{{url('investigacion/categoria')}}">Categorías</a>
 																
 							</div>
 						</li>
@@ -107,28 +109,14 @@
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							LABORATORIOS
 							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="dropdown-menu" style="padding:20px;" aria-labelledby="navbarDropdown">
 								<a  style="color:#000;" class="dropdown-item" href="{{url('/centrosInvestigacion')}}">Centros</a>
 								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('/elementosMultimedia')}}">Elem Multimedia </a>
+								<a  style="color:#000;" class="dropdown-item" href="{{url('/elementosMultimedia')}}">Elementos Multimedia </a>
 								<hr>
 								<a  style="color:#000;" class="dropdown-item" href="{{url('/laboratorios')}}">Laboratorios</a>
 								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('/laboratoriosProyectos')}}">Laboratorios/Proyecto</a>
-																
-							</div>
-						</li>	
-
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							PUBLICACION
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a  style="color:#000;" class="dropdown-item" href="{{url('/publicaciones/publicacionesProyectos')}}">Pub/Proyectos</a>
-								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('/publicaciones/publicaciones_noproyectos')}}"> No Proyectos </a>
-								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('/publicaciones/areasAcademicas')}}">Áreas</a>
+								<a  style="color:#000;" class="dropdown-item" href="{{url('/laboratoriosProyectos')}}">Laboratorios&nbsppor&nbspProyecto</a>
 																
 							</div>
 						</li>	
@@ -137,32 +125,58 @@
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							INVESTIGACIÓN
 							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/proyectosPostulados')}}">Postulados</a>
+							<div class="dropdown-menu" style="padding:20px;" aria-labelledby="navbarDropdown">
+								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/proyectosPostulados')}}">Proyecto&nbspPostulado</a>
 								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('investigacionProyectos')}}">Proyectos/Investigador</a>
+								
+								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/proyectos')}}">Proyectos&nbspde&nbspInvestigación</a>
 								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('proyectosFacultad')}}">Proyectos/Facultad</a>
+								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/lineas_x_pi_postulado')}}">Lineas&nbspdel&nbspProyecto</a>
+								<!--
 								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/proyectos')}}">Proyectos Inv</a>
+								<a  style="color:#000;" class="dropdown-item" href="{{url('proyectosFacultad')}}">Proyecto&nbsppor&nbspFacultad</a>
+								-->
 								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/lineas_x_pi_postulado')}}">Lineas/P.Postulados</a>
+								
+								<a  style="color:#000;" class="dropdown-item" href="{{url('investigacionProyectos')}}">Investigador&nbsppor&nbspProyecto</a>
 								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/dominiosAcademicos')}}">Dominios</a>
+								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/dominiosAcademicos')}}">Dominios&nbspAcadémicos</a>
 								<hr>
-								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/lineasInvestigacion')}}">Lineas Inv</a>
+								<a  style="color:#000;" class="dropdown-item" href="{{url('/proyectosInvestigacion/lineasInvestigacion')}}">Lineas&nbspde&nbspInvestigación</a>
 								<hr>
 								<a  style="color:#000;" class="dropdown-item" href="{{url('/programas')}}">Programas</a>
 								
+							</div>
+						</li>	
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							PUBLICACION
+							</a>
+							<div class="dropdown-menu" style="padding:20px;" aria-labelledby="navbarDropdown" aria-expanded="true" >
+								<a  style="color:#000;" class="dropdown-item" href="{{url('/publicaciones/areasAcademicas')}}">Áreas&nbspConocimiento</a>
+								<hr>
+								<a  style="color:#000;" class="dropdown-item " href="{{url('/publicaciones/publicacionesProyectos')}}">Proyectos</a>
+								<hr>
+								<a  style="color:#000;" class="dropdown-item" href="{{url('/publicaciones/publicaciones_noproyectos')}}"> Independientes </a>
+								<hr>
+								<a  style="color:#000;" class="dropdown-item" href="{{url('invesNoProyecto')}}"> Investigador&nbspPublicaciones&nbspNo&nbspProyecto </a>
+								
+								
+															
 							</div>
 						</li>	
 						
 						<li><a href="{{url('/eventos')}}">Eventos</a></li>
 						<li><a href="{{url('/noticias')}}">Noticias</a></li>	
 						
-						<li><a href="{{url('/logout')}}"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>	
-						
-							
+						<li>
+							<a href="{{url('/logout')}}"><i class="fa fa-sign-out" aria-hidden="true"></i>  
+							</a>
+							<div class="card-body"><font size='2' style="color:#FFf">
+							<i class="fa fa-circle" aria-hidden="true" style="color:green"></i> Online: <i class="fa fa-user" aria-hidden="true" style="color:"></i> {{ auth()->user()->name }}</font>
+							</div>
+						</li>	
 						
 					</ul>
 					
@@ -222,6 +236,7 @@
 	<script src="{{asset('js/magnific-popup-options.js')}}"></script>
 	<!-- Main -->
 	<script src="{{asset('js/main.js')}}"></script>
+
 
 	</body>
 </html>

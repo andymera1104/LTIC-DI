@@ -42,7 +42,7 @@
             <span style="width: 130px;"class="input-group-addon">Facultad</span>
                 <select name="FAC_ID" class="form-control" >
                     @foreach($facultad as $fac)
-                        <option value="{{$fac ->FAC_ID}}">{{$fac ->FAC_ID}}</option>
+                        <option value="{{$fac ->FAC_ID}}">{{$fac ->NOMBRE}}</option>
                     @endforeach
                 </select>
             </div>

@@ -50,29 +50,6 @@
 
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="input-group">
-                    <span style="width: 130px;" class="input-group-addon">Nivel </span>
-                    <input type="text" name="NIVEL" required value="{{$publicacion->NIVEL}}" class="form-control ">
-            </div>     
-        </div>
-
-
-        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-            <div class="input-group">
-                <span style="width: 130px;" class="input-group-addon">Facultad</span>
-                <select style="width: 250px;" name="FAC_ID" class="form-control " >
-                    @foreach($facultades as $fac)
-                        @if($fac->FAC_ID==$publicacion->FAC_ID)
-                        <option value="{{$fac->FAC_ID}}" selected>{{$fac->FAC_ID}}</option>
-                        @else
-                        <option value="{{$fac->FAC_ID}}">{{$fac->FAC_ID}}</option>    
-                        @endif
-                    @endforeach
-                </select>
-            </div>
-        </div>
-
-        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-            <div class="input-group">
                     <span style="width: 130px;" class="input-group-addon">Revista </span>
                     <input type="text" name="REVISTA" required value="{{$publicacion->REVISTA}}" class="form-control ">
             </div>     

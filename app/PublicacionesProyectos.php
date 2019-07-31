@@ -15,14 +15,14 @@ class PublicacionesProyectos extends Model
 
     protected $fillable= [
         'AREA_ID',
-        'FAC_ID',
+        //'FAC_ID',
         'POST_ID',
         'TITULO',
         'ABSTRACT',
         'FECHAPUB',
         'REVISTA',
         'TIPO',
-        'NIVEL'
+        //'NIVEL'
     ];
 
     protected $guarded = 

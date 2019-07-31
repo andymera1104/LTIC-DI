@@ -83,7 +83,9 @@
             <div class="col-md-2 text-center">
                 <div class="mb-5 flex-center">
                     <div class="img-hover-zoom1 img-hover-zoom--slowmo1" style="width:100%;max-width:100%;transform: scale(1.1);">
-                        <img class="center-block"src="{{asset('imagenes/logo-puce.jpg')}} " style="width: 100%;"/>											
+                        <a href="https://www.puce.edu.ec/">
+                        <img class="center-block"src="{{asset('imagenes/logo-puce.jpg')}} " style="width: 100%;"/>	
+                        </a>										
                       </div>								
                 </div>
             </div>
@@ -96,15 +98,15 @@
                         <th>
                             <div class="col-12" style="color:black;">
                                 <h6 style="padding:none;margin:none;">Av. 12 de Octubre 1076 y Roca| Apartado postal 17-01-2184| Quito, Ecuador</h6>	
-                                <h6 style="padding:none;margin:none;"> Teléfonos: (593) 02 2991 700</h6>														
+                                <h6 style="padding:none;margin:none;"> Teléfonos: (+593) 02 2991 700</h6>														
                             </div>	
                         </th>
                       </tr>
                       <tr>
                         <th>
                             <div class="col-12" style="color:black;">
-                              <a id="subrayado" href="{{url('investigacionC/investigadoresC')}}"><u style="text-decoration-color: #4CBFDC!important;"><font size='3'>Investigadores</font></u></a>
-                              <a id="subrayado" href="{{url('contacto')}}"><u style="text-decoration-color: #4CBFDC!important;"><font size='3'>Contáctanos</font></u></a>
+                              <a id="subrayado" href="{{url('investigacionC/investigadoresC')}}"><u style="text-decoration-color: #4CBFDC!important;"><font size='4'>Investigadores</font></u></a>
+                              <a id="subrayado" href="{{url('contacto')}}"><u style="text-decoration-color: #4CBFDC!important;"><font size='4'>Contáctanos</font></u></a>
                             </div>
                         </th>
                       </tr>
@@ -143,8 +145,8 @@
                 <div class="col-12">					
                     <div class="vl flex-center">
                         <ul style="color:white; text-align: left;">
-                            <li><a  id="subrayado" href="{{url('eventC')}}" style="color:black;text-align: left;"><font size='3'>Eventos</font></a></li>
-                            <li><a  id="subrayado" href="{{url('noticiasC')}}"style="color:black;text-align: left;"><font size='3'>Noticias</font></a></li>
+                            <li><a  id="subrayado" href="{{url('eventC')}}" style="color:black;text-align: left;"><font size='4'>Eventos</font></a></li>
+                            <li><a  id="subrayado" href="{{url('noticiasC')}}"style="color:black;text-align: left;"><font size='4'>Noticias</font></a></li>
                           </ul>
                     </div>											
                 </div>
@@ -155,8 +157,8 @@
                     <div class="col-12">					
                         <div class="vl flex-center" >
                             <ul style="color:white; text-align: left;">
-                                <li><a  id="subrayado" href="{{url('elementosMultimediaC')}}" style="color:black;text-align: left;"> <font size='3'>Centros de Investigación </font></a></li>
-                                <li><a  id="subrayado" href="{{url('labotC')}}" style="color:black;text-align: left;"> <font size='3'>Laboratorios</font></a></li>
+                                <li><a  id="subrayado" href="{{url('elementosMultimediaC')}}" style="color:black;text-align: left;"> <font size='4'>Centros de Investigación </font></a></li>
+                                <li><a  id="subrayado" href="{{url('labotC')}}" style="color:black;text-align: left;"> <font size='4'>Laboratorios</font></a></li>
                             </ul>
                         </div>											
                     </div>
@@ -168,7 +170,11 @@
                           <tbody>
                             <tr>
                               <th>
-                              © Laboratorio de Tecnologías de la Información y Comunicación LTIC- PUCE
+                              © Laboratorio de Tecnologías de la Información y Comunicación 
+                              <br>  
+                              LTIC- PUCE
+                              <br>
+                              Teléfonos 02 2991 700 Ext. 2450 - 1673  
                               </th>
                             </tr>
                           </tbody>

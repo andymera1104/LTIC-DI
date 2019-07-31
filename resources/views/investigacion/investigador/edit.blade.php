@@ -139,11 +139,12 @@
         <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12" style="display:none">
             <div class="input-group">
             <span style="width: 130px;" class="input-group-addon">Video </span>
-                    <textarea type="text" name="VIDEO" required value="{{$investigador->VIDEO}}" class="form-control " >{{$investigador->VIDEO}}</textarea>
+                    <textarea type="text" name="VIDEO"  value="{{$investigador->VIDEO}}" class="form-control " >{{$investigador->VIDEO}}</textarea>
             </div> 
         </div>
         <div class="col-lg-10 col-sm-6 col-md-6 col-xs-12">
             <div class="form-group">
+            <br>
                <button class="btn btn-success" type="submit">Guardar</button>
                <button class="btn btn-danger" type="reset">Cancelar</button>
             </div>

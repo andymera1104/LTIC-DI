@@ -91,6 +91,7 @@
         <div class="col-lg-10 col-sm-6 col-md-6 col-xs-12">
         <br>
             <div class="form-group">
+            <br>
                <button class="btn btn-success" type="submit">Guardar</button>
                <button class="btn btn-danger" type="reset">Cancelar</button>
             </div>

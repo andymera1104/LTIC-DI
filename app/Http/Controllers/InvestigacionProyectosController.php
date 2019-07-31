@@ -29,9 +29,10 @@ class InvestigacionProyectosController extends Controller
             $query=trim($request->get('searchText'));
             $invpro=DB::table('invs_x_pryct as inpr')
             ->join('proyectoinvestigacion as prin','inpr.POST_ID','=','prin.POST_ID')
+            ->join('pi_postulados as pos','prin.POST_ID','=','pos.POST_ID')
             ->join('investigador as inv','inpr.INV_ID','=','inv.INV_ID')
 
-            ->select('inv.INV_ID as investigador','prin.POST_ID as proyecto')
+            ->select('inv.INV_ID as investigador','pos.NOMBRE as proyecto')
             ->where('inv.NOMBRE','LIKE','%'.$query.'%')
             ->orwhere('prin.POST_ID','LIKE','%'.$query.'%')
             ->orderBy('inpr.INV_ID', 'ASC')

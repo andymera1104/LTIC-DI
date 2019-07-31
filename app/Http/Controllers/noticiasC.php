@@ -24,7 +24,7 @@ class noticiasC extends Controller
             ->where('TITULO','LIKE','%'.$query.'%')
             ->orwhere('FECHA','LIKE','%'.$query.'%')
             ->orderBy('FECHA','ASC')
-            ->paginate(7);
+            ->paginate(4);
             return view('noticiasC/noticiasC',["noticias"=>$noticias,"searchText"=>$query]);
         }
     }

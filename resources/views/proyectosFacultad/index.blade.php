@@ -19,6 +19,7 @@
                     <thead>
                        
                         <th>Proyecto</th>
+                        <th>ID Facultad</th>
                         <th>Facultad</th>
                         <th>Opciones</th>
                     </thead>
@@ -27,6 +28,7 @@
                            
                             <td>{{ $pfac-> proyecto }}</td>
                             <td>{{ $pfac-> facultad }}</td>
+                            <td>{{ $pfac-> nomfacu }}</td>
                             <td>
                                 <center>
                                 <a href="" data-target="#modal-delete-{{$pfac->facultad}}" data-toggle="modal"><i class="fa fa-trash" aria-hidden="true"></i></a>
